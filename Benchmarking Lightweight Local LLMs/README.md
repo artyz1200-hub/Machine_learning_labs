@@ -118,9 +118,8 @@ A major issue with smaller decoder-only models is "verbosity"—their tendency t
 ## Evaluation Results
 
  Test Case 1: 1_sum_clean (Summarization)
-
+```text
 Prompt Type: SIMPLE
-
 
 [T5-Small] -> the model allows scientists to see chemical modifications on nucleic acids and proteins.
 
@@ -128,22 +127,29 @@ Prompt Type: SIMPLE
 
 [Qwen-0.5B] -> DeepMind has released AlphaFold 3, a supercomputer that predicts the structure and interactions of all life's molecules with unparalleled accuracy. This breakthrough allows researchers to observe how changes occur on nucleic acids and proteins, crucial for understanding diseases and regulating cell functions.
 
-🧠 Prompt Type: ADVANCED
+Prompt Type: ADVANCED
+
 [T5-Small] -> AlphaFold 3 is an AI model capable of predicting the structure and interactions of all life’s molecules with unprecedented accuracy.
 
 [TinyLlama] -> DeepMind has announced the release of AlphaFold 3, an AI model capable of predicting the structure and interactions of all life's molecules with unprecedented accuracy. This breakthrough advancement provides scientists with the ability to visualize chemical modifications on nucleic acids and proteins, a crucial step in understanding the mechanisms behind disease development and cellular regulation.
 
 [Qwen-0.5B] -> AlphaFold 3 is a new AI model that can predict the structures and interactions of all life's molecules with unprecedented accuracy, allowing researchers to better understand how diseases develop and cellular regulation.
 
-📌 Test Case 2: 2_sum_noisy (Summarization)
-🧠 Prompt Type: SIMPLE
+```
+
+Test Case 2: 2_sum_noisy (Summarization)
+
+```text
+Prompt Type: SIMPLE
+
 [T5-Small] -> internal deadline remains Sept 15, public launch is Oct 12.
 
 [TinyLlama] -> In summary, we have decided to push the launch date of the beta version of the product to October 12th, but we are monitoring the market and will make an updated decision if any compliance issues arise in Europe. The internal deadline for the beta has been set as September 15th, while the public launch date has been set as October 12th.
 
 [Qwen-0.5B] -> Team, we had a meeting with marketing about pushing the release date from September 15th to October 12th due to EU compliance issues. John argues this would delay the holiday rush, while Sarah believes it's better to release a buggy version to avoid any potential issues. We've agreed to keep the internal deadline at September 15th and set the public launch date for October 12th instead.
 
-🧠 Prompt Type: ADVANCED
+Prompt Type: ADVANCED
+
 [T5-Small] -> internal deadline remains Sept 15, public launch is Oct 12.
 
 [TinyLlama] -> In the chat with marketing, they want to push the launch date of Q3's product to October 12th because of some compliance delays in Europe. John, the project manager, suggests that they meet with the marketing team again to discuss the implications of pushing the launch date. Sarah notes that releasing a buggy version would be worse than not releasing the product, and the team decides to compromise and set a new internal deadline of
@@ -154,8 +160,13 @@ Internal deadline remains September 15.
 
 Public launch is October 12.
 
-📌 Test Case 3: 3_trans_formal (Translation)
-🧠 Prompt Type: SIMPLE
+```
+
+Test Case 3: 3_trans_formal (Translation)
+Prompt Type: SIMPLE
+
+```text
+
 [T5-Small] -> Der Auftragnehmer setzt die Cloud-Infrastruktur nach den in Abschnitt 4.2 beschriebenen Spezifikationen um.
 
 [TinyLlama] -> Die Diensteanbieter müssen das Cloudinfrastrukturkonzept nach den in Sektion 4.2 beschriebenen Anforderungen ausführen.
@@ -186,6 +197,8 @@ Das heißt: Die Vertragstextbestimmungen sind für den Vertragsausschluss unber�
 Die Vertragsbedingungen
 
 [Qwen-0.5B] -> Der Contractor wird die Cloud-Infrastruktur implementieren, nach der vorhergegangenen Standards festgelegt sind.
+```
+
 
 📌 Test Case 4: 4_trans_idiom (Translation)
 🧠 Prompt Type: SIMPLE
