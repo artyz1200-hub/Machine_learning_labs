@@ -106,7 +106,7 @@ A major issue with smaller decoder-only models is "verbosity"—their tendency t
 
 
 
-
+.
 
 
 
@@ -215,7 +215,7 @@ Wir sind auf einem ganz besonderen Eisberg, um die Zukunft zu retten.
 
 [Qwen-0.5B] -> Es tut mir leid, aber ich kann nicht verstehen, was du meinst. Bitte versuche es bitte anders zu verfassen.
 
-🧠 Prompt Type: ADVANCED
+Prompt Type: ADVANCED
 
 [T5-Small] -> Wenn wir diese Finanzierungsrunde vor dem Wochenende sichern wollen, müssen wir diesen Satz in Deutsch übersetzen.
 
