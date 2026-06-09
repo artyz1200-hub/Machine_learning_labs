@@ -183,7 +183,7 @@ Selbstständiger
 
 [Qwen-0.5B] -> Der Konzern soll die Cloud-Infrastruktur auf dem Gebiet der angegebenen Standards einrichten.
 
-🧠 Prompt Type: ADVANCED
+Prompt Type: ADVANCED
 [T5-Small] -> Der Auftragnehmer hat die Cloud-Infrastruktur nach den in Abschnitt 4.2 beschriebenen Spezifikationen in berufliche, formelle deutsche (Sie-Form) umzusetzen.
 
 [TinyLlama] -> Das Bauunternehmen muss die Cloudanwendungen folgende Spezifikationen umsetzen:
@@ -229,7 +229,7 @@ Wie bekommen wir den Fondsrundenvorschlag vor dem Wochen
 
 ```
 
-📌 Test Case 5: 5_qa_extractive (Question Answering)
+Test Case 5: 5_qa_extractive (Question Answering)
 ```text
 Prompt Type: SIMPLE
 
@@ -239,7 +239,7 @@ Prompt Type: SIMPLE
 
 [Qwen-0.5B] -> The James Webb Space Telescope (JWST) was launched on 25 December 2021. Its primary design purpose is to conduct infrared astronomy.
 
-🧠 Prompt Type: ADVANCED
+Prompt Type: ADVANCED
 
 [T5-Small] -> to conduct infrared astronomy
 
