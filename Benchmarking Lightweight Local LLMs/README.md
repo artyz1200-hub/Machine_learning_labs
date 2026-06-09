@@ -103,3 +103,148 @@ A major issue with smaller decoder-only models is "verbosity"—their tendency t
 1. **We can use T5-Small (60M) when:** We are building ultra-lightweight, lightning-fast pipelines for static tasks (like pure extractive QA or basic translation) on heavily restricted hardware (e.g., edge or mobile devices). It does not "reason" or follow system personas, but it acts as a reliable, fast text transformer.
 2. **We can use Qwen2.5-0.5B (500M) when:** We need a highly obedient, structurally reliable assistant that can format JSON, generate clean markdown bullets, or strictly control output length. It represents the pinnacle of modern SLM tuning, beating models twice its size in structural adherence.
 3. **WE can use TinyLlama-1.1B (1.1B) when:** Your primary requirement is conversational phrasing, semantic synthesis, or handling hostile/adversarial inputs where the model must intelligently refuse to answer based on missing context. Beware of its high latency and tendency to repeat context headers.
+
+
+
+
+
+
+
+
+
+
+
+
+## Evaluation Results
+
+ Test Case 1: 1_sum_clean (Summarization)
+
+Prompt Type: SIMPLE
+
+
+[T5-Small] -> the model allows scientists to see chemical modifications on nucleic acids and proteins.
+
+[TinyLlama] -> DeepMind, a British technology company, has announced AlphaFold 3, a breakthrough in the field of molecular biology. This AI model is capable of predicting the structures and interactions of all life's molecules with unprecedented accuracy, including nucleic acids and proteins that play key roles in disease development and cellular regulation. The model, developed using machine learning and deep learning techniques, can predict the structures of proteins and DNA
+
+[Qwen-0.5B] -> DeepMind has released AlphaFold 3, a supercomputer that predicts the structure and interactions of all life's molecules with unparalleled accuracy. This breakthrough allows researchers to observe how changes occur on nucleic acids and proteins, crucial for understanding diseases and regulating cell functions.
+
+🧠 Prompt Type: ADVANCED
+[T5-Small] -> AlphaFold 3 is an AI model capable of predicting the structure and interactions of all life’s molecules with unprecedented accuracy.
+
+[TinyLlama] -> DeepMind has announced the release of AlphaFold 3, an AI model capable of predicting the structure and interactions of all life's molecules with unprecedented accuracy. This breakthrough advancement provides scientists with the ability to visualize chemical modifications on nucleic acids and proteins, a crucial step in understanding the mechanisms behind disease development and cellular regulation.
+
+[Qwen-0.5B] -> AlphaFold 3 is a new AI model that can predict the structures and interactions of all life's molecules with unprecedented accuracy, allowing researchers to better understand how diseases develop and cellular regulation.
+
+📌 Test Case 2: 2_sum_noisy (Summarization)
+🧠 Prompt Type: SIMPLE
+[T5-Small] -> internal deadline remains Sept 15, public launch is Oct 12.
+
+[TinyLlama] -> In summary, we have decided to push the launch date of the beta version of the product to October 12th, but we are monitoring the market and will make an updated decision if any compliance issues arise in Europe. The internal deadline for the beta has been set as September 15th, while the public launch date has been set as October 12th.
+
+[Qwen-0.5B] -> Team, we had a meeting with marketing about pushing the release date from September 15th to October 12th due to EU compliance issues. John argues this would delay the holiday rush, while Sarah believes it's better to release a buggy version to avoid any potential issues. We've agreed to keep the internal deadline at September 15th and set the public launch date for October 12th instead.
+
+🧠 Prompt Type: ADVANCED
+[T5-Small] -> internal deadline remains Sept 15, public launch is Oct 12.
+
+[TinyLlama] -> In the chat with marketing, they want to push the launch date of Q3's product to October 12th because of some compliance delays in Europe. John, the project manager, suggests that they meet with the marketing team again to discuss the implications of pushing the launch date. Sarah notes that releasing a buggy version would be worse than not releasing the product, and the team decides to compromise and set a new internal deadline of
+
+[Qwen-0.5B] ->
+
+Internal deadline remains September 15.
+
+Public launch is October 12.
+
+📌 Test Case 3: 3_trans_formal (Translation)
+🧠 Prompt Type: SIMPLE
+[T5-Small] -> Der Auftragnehmer setzt die Cloud-Infrastruktur nach den in Abschnitt 4.2 beschriebenen Spezifikationen um.
+
+[TinyLlama] -> Die Diensteanbieter müssen das Cloudinfrastrukturkonzept nach den in Sektion 4.2 beschriebenen Anforderungen ausführen.
+
+Siehe auch:
+
+Selbstständig betriebene Diensteanbieter:
+
+Selbstständig betriebene Diensteanbieter:
+
+Selbstständige Diensteanbieter:
+
+Selbstständiger
+
+[Qwen-0.5B] -> Der Konzern soll die Cloud-Infrastruktur auf dem Gebiet der angegebenen Standards einrichten.
+
+🧠 Prompt Type: ADVANCED
+[T5-Small] -> Der Auftragnehmer hat die Cloud-Infrastruktur nach den in Abschnitt 4.2 beschriebenen Spezifikationen in berufliche, formelle deutsche (Sie-Form) umzusetzen.
+
+[TinyLlama] -> Das Bauunternehmen muss die Cloudanwendungen folgende Spezifikationen umsetzen:
+
+Abschnitt 4.2
+
+Die Vertragspartei zahlt die Unternehmung für die Durchführung der Cloudanwendungen nach den Bestimmungen in Satz 4.2.
+
+Das heißt: Die Vertragstextbestimmungen sind für den Vertragsausschluss unberührt.
+
+Die Vertragsbedingungen
+
+[Qwen-0.5B] -> Der Contractor wird die Cloud-Infrastruktur implementieren, nach der vorhergegangenen Standards festgelegt sind.
+
+📌 Test Case 4: 4_trans_idiom (Translation)
+🧠 Prompt Type: SIMPLE
+[T5-Small] -> Nehmen Sie nicht den Busch um, wir müssen uns auf die Jagd drücken, wenn wir diese Finanzierungsrunde vor dem Wochenende sichern wollen.
+
+[TinyLlama] -> Nachdem wir unsere Forderungen für das Fertigstellungsgesuch aus den letzten Wochen beweisen konnten, müssen wir unbedingt den Termin zu diesem Funding Round vor dem Wochenende sicherstellen.
+
+Schnell, bitte! Die Zeit vergeht schnell.
+
+Wir sind auf einem ganz besonderen Eisberg, um die Zukunft zu retten.
+
+[Qwen-0.5B] -> Es tut mir leid, aber ich kann nicht verstehen, was du meinst. Bitte versuche es bitte anders zu verfassen.
+
+🧠 Prompt Type: ADVANCED
+[T5-Small] -> Wenn wir diese Finanzierungsrunde vor dem Wochenende sichern wollen, müssen wir diesen Satz in Deutsch übersetzen.
+
+[TinyLlama] -> Abstüzen um den Bau; wir brauchen die Fortschritte zu knacken, um dieses Fondsrundenvoraus zu sichern vor dem Wochenende zu haben.
+
+Bearbeitung an den Stahl; wir brauchen die Zeit zu verbringen, um diesen Stahlvorrat zu schaffen, bevor die Woche anhält.
+
+Wie bekommen wir den Fondsrundenvorschlag vor dem Wochen
+
+[Qwen-0.5B] -> Schätzen Sie nicht ab und verhindern Sie damit, dass Sie zu einem Fundinground in die Zeit kommen sollten, bevor der Weekend vorbei ist.
+
+📌 Test Case 5: 5_qa_extractive (Question Answering)
+🧠 Prompt Type: SIMPLE
+[T5-Small] -> to conduct infrared astronomy
+
+[TinyLlama] -> The James Webb telescope was launched on 25 December 2021. Its primary design purpose is to conduct infrared astronomy. It features a 6.5-meter gold-coated primary mirror that is designed primarily for infrared observations.
+
+[Qwen-0.5B] -> The James Webb Space Telescope (JWST) was launched on 25 December 2021. Its primary design purpose is to conduct infrared astronomy.
+
+🧠 Prompt Type: ADVANCED
+[T5-Small] -> to conduct infrared astronomy
+
+[TinyLlama] -> Context: The James Webb Space Telescope (JWST) was launched on 25 December 2021. It is designed primarily to conduct infrared astronomy.
+
+Question: When was the James Webb telescope launched and what is its primary design purpose?
+
+Answer: The James Webb telescope was launched on 25 December 2021. Its primary design purpose is to conduct infrared astronomy.
+
+[Qwen-0.5B] -> The James Webb telescope was launched in 2021 and has an infrared design purpose.
+
+📌 Test Case 6: 6_qa_adversarial (Question Answering)
+🧠 Prompt Type: SIMPLE
+[T5-Small] -> 484,000
+
+[TinyLlama] -> The question does not specify the US market specifically, and Tesla did not provide any information on how many cars were sold in the US market. Therefore, it is not clear from the given context how many Tesla vehicles were sold in the United States market.
+
+[Qwen-0.5B] -> Tesla reported that it delivered over 484, 000 electric vehicles in its first quarter, which is quite impressive. To determine how many of these vehicles were sold specifically in the United States market, we need to consider the total number of vehicles produced by Tesla globally.
+
+Global Production Data:
+Tesla Inc. produces around 215, 000 electric vehicles per year (as of 2023).
+
+Tesla Motors also produces around
+
+🧠 Prompt Type: ADVANCED
+[T5-Small] -> 484,000
+
+[TinyLlama] -> Information not available in context. Tesla did not specify the breakdown of sales between the United States and the European market in this short report, leaving analysts to guess.
+
+[Qwen-0.5B] -> The Tesla vehicle was delivered over 484,000 in the United States market.
