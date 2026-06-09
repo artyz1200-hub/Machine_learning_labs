@@ -200,8 +200,11 @@ Die Vertragsbedingungen
 ```
 
 
-📌 Test Case 4: 4_trans_idiom (Translation)
-🧠 Prompt Type: SIMPLE
+Test Case 4: 4_trans_idiom (Translation)
+
+```text
+Prompt Type: SIMPLE
+
 [T5-Small] -> Nehmen Sie nicht den Busch um, wir müssen uns auf die Jagd drücken, wenn wir diese Finanzierungsrunde vor dem Wochenende sichern wollen.
 
 [TinyLlama] -> Nachdem wir unsere Forderungen für das Fertigstellungsgesuch aus den letzten Wochen beweisen konnten, müssen wir unbedingt den Termin zu diesem Funding Round vor dem Wochenende sicherstellen.
@@ -213,6 +216,7 @@ Wir sind auf einem ganz besonderen Eisberg, um die Zukunft zu retten.
 [Qwen-0.5B] -> Es tut mir leid, aber ich kann nicht verstehen, was du meinst. Bitte versuche es bitte anders zu verfassen.
 
 🧠 Prompt Type: ADVANCED
+
 [T5-Small] -> Wenn wir diese Finanzierungsrunde vor dem Wochenende sichern wollen, müssen wir diesen Satz in Deutsch übersetzen.
 
 [TinyLlama] -> Abstüzen um den Bau; wir brauchen die Fortschritte zu knacken, um dieses Fondsrundenvoraus zu sichern vor dem Wochenende zu haben.
@@ -223,8 +227,12 @@ Wie bekommen wir den Fondsrundenvorschlag vor dem Wochen
 
 [Qwen-0.5B] -> Schätzen Sie nicht ab und verhindern Sie damit, dass Sie zu einem Fundinground in die Zeit kommen sollten, bevor der Weekend vorbei ist.
 
+```
+
 📌 Test Case 5: 5_qa_extractive (Question Answering)
-🧠 Prompt Type: SIMPLE
+```text
+Prompt Type: SIMPLE
+
 [T5-Small] -> to conduct infrared astronomy
 
 [TinyLlama] -> The James Webb telescope was launched on 25 December 2021. Its primary design purpose is to conduct infrared astronomy. It features a 6.5-meter gold-coated primary mirror that is designed primarily for infrared observations.
@@ -232,6 +240,7 @@ Wie bekommen wir den Fondsrundenvorschlag vor dem Wochen
 [Qwen-0.5B] -> The James Webb Space Telescope (JWST) was launched on 25 December 2021. Its primary design purpose is to conduct infrared astronomy.
 
 🧠 Prompt Type: ADVANCED
+
 [T5-Small] -> to conduct infrared astronomy
 
 [TinyLlama] -> Context: The James Webb Space Telescope (JWST) was launched on 25 December 2021. It is designed primarily to conduct infrared astronomy.
@@ -242,8 +251,13 @@ Answer: The James Webb telescope was launched on 25 December 2021. Its primary d
 
 [Qwen-0.5B] -> The James Webb telescope was launched in 2021 and has an infrared design purpose.
 
-📌 Test Case 6: 6_qa_adversarial (Question Answering)
-🧠 Prompt Type: SIMPLE
+```
+
+Test Case 6: 6_qa_adversarial (Question Answering)
+
+```text
+Prompt Type: SIMPLE
+
 [T5-Small] -> 484,000
 
 [TinyLlama] -> The question does not specify the US market specifically, and Tesla did not provide any information on how many cars were sold in the US market. Therefore, it is not clear from the given context how many Tesla vehicles were sold in the United States market.
@@ -255,9 +269,12 @@ Tesla Inc. produces around 215, 000 electric vehicles per year (as of 2023).
 
 Tesla Motors also produces around
 
-🧠 Prompt Type: ADVANCED
+
+Prompt Type: ADVANCED
+
 [T5-Small] -> 484,000
 
 [TinyLlama] -> Information not available in context. Tesla did not specify the breakdown of sales between the United States and the European market in this short report, leaving analysts to guess.
 
 [Qwen-0.5B] -> The Tesla vehicle was delivered over 484,000 in the United States market.
+```
