@@ -17,7 +17,7 @@ The goal of this project is to move beyond abstract theory and benchmark how an 
 
 ---
 
-## 🚀 Phase 1: The Encoder Pipeline (RoBERTa-base Fine-Tuning)
+## Phase 1: The Encoder Pipeline (RoBERTa-base Fine-Tuning)
 
 **RoBERTa (Robustly Optimized BERT Approach)** is designed for deep bidirectional context processing, making it natively exceptional for classification and structural feature extraction. 
 
@@ -49,7 +49,7 @@ weighted avg       0.81      0.80      0.80      1000
 
 ---
 
-## 🧠 Phase 2: The Decoder Pipeline (Qwen 2.5 Zero-Shot Prompting)
+##  Phase 2: The Decoder Pipeline (Qwen 2.5 Zero-Shot Prompting)
 
 Switching paradigms completely, we deployed **Qwen/Qwen2.5-1.5B-Instruct**—a 1.5 Billion parameter autoregressive decoder model. This pipeline skips weight updates entirely, optimizing inference latency via strict prompt construction and batched sequence generation.
 
@@ -91,6 +91,8 @@ Qwen 2.5 parameters: 1,543,714,304
 
 ```
 
+![alt text](image-2.png)
+
 ### Prompt Compliance & Instruction Following Analysis
 
 One of the primary challenges with decoder deployment is guaranteeing constraint satisfaction. Qwen 2.5 demonstrated exceptional instruction-following adherence, sticking strictly to the requested binary semantic terms **99.9%** of the time.
@@ -112,8 +114,15 @@ When evaluating the models side-by-side on identical text samples, the Decoder (
 ### Error Matrix Breakdown
 
 * **RoBERTa Head:** Struggled with high False Positives (119 cases where Positive was predicted for a Negative true text). This indicates that the untrained classification head required deeper learning rate adjustments or unfreezing of lower layers to separate weak structural signals.
+
+![alt text](image.png)
+
 * **Qwen 2.5 LLM:** Exhibited incredibly clean separations. It only misclassified 19 true negative reviews as positive, highlighting its pre-trained grasp over natural linguistics, sarcasm, and movie review semantics.
 
+
+
+
+![alt text](image-1.png)
 ---
 
 ## 🏁 Architectural Trade-offs & Engineering Conclusions
