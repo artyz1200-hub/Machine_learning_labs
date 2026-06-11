@@ -54,3 +54,6 @@ Padding Configuration: Left-padding explicitly initialized (padding_side = "left
 - User: "Analyze the sentiment of this review. Respond with exactly one word: either 'positive' or 'negative'."
 
 - Generation Parameters: max_new_tokens=3, do_sample=False (Greedy decoding for determinism).
+
+Live Peek Into Post-Processing Logic
+To evaluate compliance with the structured prompt, raw generated strings were tracked before mapping into numerical labels:
