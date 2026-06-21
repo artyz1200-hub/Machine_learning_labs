@@ -50,15 +50,21 @@ Open `mnist_denoising_autoencoder.ipynb` and run the cells top to bottom.
 6. Training with MSE loss and Adam
 7. Final reconstruction grid (Original / Noisy / Reconstructed)
 
-## Results (Placeholder)
+## Results and Photos
 
-### Before Training (Noisy vs Clean)
+These are the main visuals from the project. They show the noisy input before training, how the loss changes over time, and the final reconstruction quality.
 
-<!-- Add figure or screenshot here -->
+### 1. MNIST Before Training
 
-### After Training (Original / Noisy / Reconstructed)
+![MNIST Before Training](ph/1.png)
 
-<!-- Add figure or screenshot here -->
+### 2. Training Loss
+
+![Training Loss](ph/train_loss.png)
+
+### 3. Final Denoising Result
+
+![Final Denoising Result](ph/den_res.png)
 
 ## Notes
 
