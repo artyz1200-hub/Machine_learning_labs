@@ -13,3 +13,9 @@ A collection of various machine learning projects, benchmarks, and case studies 
 *   **CBIR Image Search Engine:** Content-Based Image Retrieval system for searching similar images.
 
 ---
+
+---
+
+## 📜 License
+
+This repository is licensed under the [MIT License](LICENSE).
